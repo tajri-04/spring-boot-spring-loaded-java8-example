@@ -12,4 +12,13 @@ pipeline {
             }
         }
     }
+    stages {
+        stage( 'sonnar' ){
+            steps{
+                echo 'SCAN SONNAR'
+                sh 'mvn sonar:sonar'
+              
+            }
+        }
+    }
 }
