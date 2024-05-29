@@ -11,8 +11,6 @@ pipeline {
                 echo 'HELLLLLLLLLLLLLLLO'
             }
         }
-    }
-    stages {
         stage( 'sonnar' ){
             steps{
                 echo 'SCAN SONNAR'
