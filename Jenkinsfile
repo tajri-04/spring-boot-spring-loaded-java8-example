@@ -13,10 +13,11 @@ pipeline {
         }
         stage( 'sonnar' ){
             steps{
+              withSonarQubeEnv(){
                 echo 'SCAN SONNAR'
                 sh 'mvn sonar:sonar'
-              
-            }
+              }
+           }
         }
     }
 }
