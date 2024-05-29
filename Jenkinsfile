@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage( 'sonnar' ){
             steps{
-              withSonarQubeEnv('Sonar') {
+              withSonarQubeEnv('sonar-6') {
                 echo 'SCAN SONNAR'
                 sh 'mvn clean package sonar:sonar'
               }
