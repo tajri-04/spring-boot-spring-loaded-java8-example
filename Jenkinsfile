@@ -12,6 +12,12 @@ pipeline {
               }
            }
         }
+    stage( 'Deployment' ){
+            steps{
+                deploy adapters:[tomcat8(credentialsId:'TomcatCreds', path:'test',url:'http://tajri:8888/')], contextPath:'test',war:'target/*.war'
+              }
+           }
+        }
     }
 }
 
